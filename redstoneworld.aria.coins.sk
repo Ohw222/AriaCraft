@@ -1,0 +1,40 @@
+# Skript fait par: R3dStone_ et R3_Julie 
+# Merci de ne pas le reprendre sans autorisation
+# Fais sur commande pour le Network Ariacraft
+
+#!===[Options du Skript]===!#
+options:
+	noperm: &cErreur: Permission non accordé
+	perm: ariacraft.give.ariacoins
+	moneyprefix: Ac
+
+#!===[Monaie de première connexion]===!#
+on join:
+	if {bdd.aria.coins.%UUID of player%} is not set:
+		set {bdd.aria.coins.%UUID of player%} to 5
+
+#!===[Connaitre son argent]===!#
+command /ariacoins:
+	description: &aMonaie&r d'ariacraft  [Info Monaie]
+	trigger:
+		send "&e---&6===&8[&aMonaie&8]&6===&e---"
+		send " "
+		send "&eTu as: %{aria.coins.%UUID of player%}%{@moneyprefix}"
+		send " "
+		send " "
+
+#!===[Doner de l'argent]===!#
+command /givecoins [<offline player>] [<number>]:
+	permission: {@perm}
+	permission message: {@noperm}
+	description: &aMonaie&r d'ariacraft [Give coins]
+	trigger:
+		if arg 1 is not set:
+			if arg 2 is not set:
+				send "&cErreur:&a Fais /givecoins &ojoueur coins"
+		if arg 1 is set:
+			if arg 2 is set:
+				send "&6Coins&a Tu as donné %arg 2% coins a %arg 1%"
+				send "&2AriaCraft &6Coins&b Tu as reçu %arg 2% coins" to arg 1
+				add arg 2 to {bdd.aria.coins.%UUID of arg 1%}
+

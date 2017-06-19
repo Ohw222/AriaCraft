@@ -1,0 +1,57 @@
+options:
+  tabHeader: "&6&l--------> &a&l&oAria&2&l&oCraft &6<-------%nl%%nl%&6&lPseudonyme utilisé: &e&l%loop-players%%nl%&f %{bdd.aria.coins.%UUID of loop-player%}% &2&lAria&a&lcoins%nl%"
+  tabFooter: "%nl%&f&lJoueurs: &3&l%amount of players%&8/&b&l%max players%&f%nl%&bVous etes sur le &cLobby &a1"
+  refreshLog: "[TabList] Raffraichissement des tabLists terminé avec succès."
+  refreshNotif: "&7[&b&lTabList&r&7] &bRaffraichissement des tabLists terminé avec succès."
+
+On Skript Start:
+  execute console command "/tablist load"
+
+On Join:
+  execute console command "/tablist load"
+
+On Quit:
+  execute console command "/tablist load"
+
+command /tablist load:
+  aliases: tl
+  description: Permet de rafraichir les tabLists de tous les joueurs. Requis en cas modification des messages.
+  permission: tablist.load
+  executable by: console and players
+  trigger:
+    loop all players:
+      set tab header to {@tabHeader} and footer to {@tabFooter} for loop-player
+      wait 1 tick
+    log {@refreshLog}
+    if command sender is not console:
+      message {@refreshNotif} to the command sender
+
+command /rltab:
+  aliases: rlta
+  description: Permet de rafraichir les tabLists de tous les joueurs. Requis en cas modification des messages.
+  permission: tablist.load
+  executable by: console and players
+  trigger:
+    loop all players:
+      set tab header to {@tabHeader} and footer to {@tabFooter} for loop-player
+      wait 1 tick
+    log {@refreshLog}
+    if command sender is not console:
+      message {@refreshNotif} to the command sender
+	  
+command /tabprefix [<player>] [<text>]:
+    permission: red.prefix.set
+    permission message: &cTu n'as pas la permission de faire cela !
+    trigger:
+        if arg 1 is not set:
+            send "&cSyntaxe: /prefix <joueur> <prefix>"
+            stop
+        if arg 1 is set:
+            if arg 2 is set:
+                set {bdd.prefix.%arg 1%} to arg 2
+                replace all "&" in {bdd.prefix.%arg 1%} with "§"
+                send "&aVous avez défini un nouveau préfix à &f%arg 1% : %{bdd.prefix.%UUID of arg 1%}%"
+                set arg 1 tab name to "%{bdd.prefix.%UUID of arg 1%}% %arg 1%"
+            if arg 2 is not set:
+                send "&cSyntaxe: /prefix <joueur> <prefix>"
+                stop

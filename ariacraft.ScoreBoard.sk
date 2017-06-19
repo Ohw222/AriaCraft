@@ -1,0 +1,66 @@
+options:
+# Scoreboard
+    Title: &a&lAria&2&lCraft
+	
+# The lines, you can use %{bdd.rank.%loop-player%}% for the users group, %balance of loop-player% for their balance, and %player% for their name.
+    Line1: &7&m===================
+    Line2: &8
+    Line3: &a&lEn ligne:&d &cLobby &a1&d
+    Line4: &f&lJoueurs: &3&l%amount of players%&8/&b&l%max players%
+    Line5: &7
+    Line6: &7&m=======&7&lJeux&7&m=======
+    Line8: &aMini-Jeux &c&l>> &51.8.x &c&l<<
+    Line31: &aFactions &c&l>> &51.8.x &c&l<<
+    Line10: &aCréatif &c&l>> &51.8.x/1.11.x &c&l<<
+    Line9: &aSkyblock &c&l>> &51.8.x/1.11.x &c&l<<
+    Line11: &aSemi-RP/Survie &c&l>> &51.11.x &c&l<<
+    Line12: &aPrison &c&l>> &5&oBientôt &c&l<<
+    Line13: &aNation &c&l>> &5&oBientôt &c&l<<
+    Line30: &7&m====================
+    Line15: &7&m=======&7&lInfo&7&m=======
+    Line16: &2&r
+    Line22: &1
+    Line23: &6&lPseudonyme: &e&l%loop-players%
+    Line17: &l&e
+    Line18: &9&lSite:&5
+    Line19: &4A&cr&6i&ea&2C&ar&ba&3f&1t&0.&9n&de&5t
+    Line20: &4
+    Line21: &7&m=====================
+	
+#ScoreBoard (You can add lines)
+every 10 second:
+    loop all players:
+        wipe loop-player's sidebar
+        set name of sidebar of loop-player to "{@Title}"
+        set score "{@Line1}" in sidebar of loop-player to 14
+        set score "{@Line2}" in sidebar of loop-player to 13
+        set score "{@Line3}" in sidebar of loop-player to 12
+        set score "{@Line4}" in sidebar of loop-player to 11
+        set score "{@Line5}" in sidebar of loop-player to 10
+        set score "{@Line6}" in sidebar of loop-player to 9
+        set score "{@Line8}" in sidebar of loop-player to 8
+        set score "{@Line31}" in sidebar of loop-player to 7
+        set score "{@Line10}" in sidebar of loop-player to 6
+        set score "{@Line9}" in sidebar of loop-player to 5
+        set score "{@Line11}" in sidebar of loop-player to 4
+        set score "{@Line12}" in sidebar of loop-player to 3
+        set score "{@Line13}" in sidebar of loop-player to 2
+        set score "{@Line30}" in sidebar of loop-player to 1
+        wait 5 seconds
+    loop all players:
+        wipe loop-player's sidebar
+        set name of sidebar of loop-player to "{@Title}"
+        set score "{@Line1}" in sidebar of loop-player to 14
+        set score "{@Line2}" in sidebar of loop-player to 13
+        set score "{@Line3}" in sidebar of loop-player to 12
+        set score "{@Line4}" in sidebar of loop-player to 11
+        set score "{@Line5}" in sidebar of loop-player to 10
+        set score "{@Line15}" in sidebar of loop-player to 9
+        set score "{@Line16}" in sidebar of loop-player to 8
+        set score "{@Line23}" in sidebar of loop-player to 7
+        set score "{@Line22}" in sidebar of loop-player to 6
+        set score "{@Line17}" in sidebar of loop-player to 5
+        set score "{@Line18}" in sidebar of loop-player to 4
+        set score "{@Line19}" in sidebar of loop-player to 3
+        set score "{@Line20}" in sidebar of loop-player to 2
+        set score "{@Line21}" in sidebar of loop-player to 1

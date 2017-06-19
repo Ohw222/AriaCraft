@@ -1,0 +1,58 @@
+command /rss [<text>] [<text>]:
+	trigger:
+		if player has permission "red.supersned.use" or "red.*" or "red.mod.*":
+			if arg 1 is not set:
+				send "&b=====&e Aide &b====="
+				send " "
+				send "&a/rss System.print &omessage &8>> &fEnvoi un message a la console"
+				send "&a/rss Player.print &omessage&8 >>&f Envoi un message a tout les joueurs &aen ligne&f sur le serveur"
+				send "&a/rss PPlayer.print &omessage&8 >>&f Envoi un message a sois même"
+				send "&a/rss Player.outSys.Admin &omessage&8 >>&f Envoi un message au &cAdmin&f en ligne sur le serveur"
+			if arg 1 is "help":
+				send "&b=====&e Aide &b====="
+				send " "
+				send "&a/rss System.print &omessage &8>> &fEnvoi un message a la console"
+				send "&a/rss Player.print &omessage&8 >>&f Envoi un message a tout les joueurs &aen ligne&f sur le serveur"
+				send "&a/rss PPlayer.print &omessage&8 >>&f Envoi un message a sois même"
+				send "&a/rss Player.outSys.Admin &omessage&8 >>&f Envoi un message au &cAdmin&f en ligne sur le serveur"
+				send "&cTIPS: &a le système staff requis une permission pour recevoir ce message permission en question 'red.mod.message' ou 'red.mod.*'"
+			if arg 1 is "System.print":
+				if arg 2 is not set:
+					send "&cErreur&4 >> &aFais /rss help"
+				if arg 2 is set:
+					send "&8[&6SuperSend&8]&a Requéte serveur ..."
+					wait 15 ticks
+					log "[Super Send] message > %arg 2%"
+					wait 9 ticks
+					send "&8[&6SuperSend&8]&a Message envoyé &8[&bmessage: &f%arg 2%&8]"
+			if arg 1 is "Player.print":
+				if arg 2 is not set:
+					send "&cErreur&4 >> &aFais /rss help"
+				if arg 2 is set:
+					wait a ticks
+					broadcast "&f&lMessage &r&f>>&a %arg 2%"
+					send "&8[&6SuperSend&8]&a Send !"
+			if arg 1 is "PPlayer.print":
+				if arg 2 is not set:
+					send "&cErreur&4 >> &aFais /rss help"
+				if arg 2 is set:
+					wait a ticks
+					send "&eM&6é&em&6o&f >> &a%arg 2 %"
+					wait 7 ticks
+					send "&8[&6SuperSend&8]&a Send !"
+			if arg 1 is "Player.outSys.Admin":
+				if arg 2 is not set:
+					send "&cErreur&4 >> &aFais /rss help"
+				if arg 2 is set:
+					loop all players:
+						if loop-player has permission "red.mod.message" or "red.mod.*":
+							send "&cMessage &8'&b%player%&8'&f>> &2%arg 2%" to loop-player
+		else:
+			send "&bJe suis désolé mais tu n'as pas la &cpermission requise &bpour faire cette commande."
+			send "&6PS: Ceci est une erreur ? Contacte un membre du staff pour avoir une réponse dans les plus brefs délai"
+on tab completer for "rss":
+	add "System.print" to completions
+	add "Player.print" to completions
+	add "PPlayer.print" to completions
+	add "Player.outSys.Admin" to completions
+	add "help" to completions
