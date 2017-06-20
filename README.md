@@ -42,7 +42,7 @@ Installez le plugin dans le dossier "plugins" de votre serveur minecraft, reload
 
 # EN-AriaCraft
 ## A. Prerequisites
-All the resources mentioned below need Spigot 1.8.8 (made available in the "Serveur").
+All the resources mentioned below need Spigot 1.8.8 (available in the "Serveur" rep.).
 ## B. Skripts 
 ### 1. The Skripts
 AriaCraft uses some Skripts plugins :
