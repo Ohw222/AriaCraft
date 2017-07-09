@@ -1,13 +1,13 @@
 <h1>MENU</h1>
-Français French : https://github.com/Ohw222/AriaCraft/blob/master/README.md#fr-ariacraft
+Français French : https://github.com/Ohw222/AriaCraft/blob/master/README.md#fr-ariacraft <br>
 English Anglais : https://github.com/Ohw222/AriaCraft/blob/master/README.md#en-ariacraft
 <br>
 
-<h1 id="fr">FR-AriaCraft</h1>
-## A. Pres requis
-Toutes les ressources citées ci-dessous nécésitent Spigot 1.8.8 (mis à dispo dans le rep. "Serveur").
-## B. Skripts 
-### 1. Les Skripts
+<h1 id="fr">FR-AriaCraft</h1><br> 
+## A. Pres requis<br> 
+Toutes les ressources citées ci-dessous nécésitent Spigot 1.8.8 (mis à dispo dans le rep. "Serveur"). <br> 
+## B. Skripts <br> 
+### 1. Les Skripts <br> 
 Sur AriaCraft, nous utilisons le plugins Skripts et d'autres addons :
 <br>    - TuSke
 <br>    - SQLibrary
