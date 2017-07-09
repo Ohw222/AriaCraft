@@ -1,6 +1,7 @@
 <h1>MENU</h1>
-[#Français French](#fr-Ariacraft)</a>
-[#English Anglais](#en-Ariacraft)<br>
+Français French : https://github.com/Ohw222/AriaCraft/blob/master/README.md#fr-ariacraft
+English Anglais : https://github.com/Ohw222/AriaCraft/blob/master/README.md#en-ariacraft
+<br>
 
 <h1 id="fr">FR-AriaCraft</h1>
 ## A. Pres requis
