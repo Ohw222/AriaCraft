@@ -1,4 +1,8 @@
-# FR-AriaCraft
+<h1>MENU</h1>
+<a href="#fr"><h4><strong>Français</strong> French</h4></a><br>
+<a href="#en"><h4><strong>English</strong> Anglais</h4></a>
+
+<h1 id="fr">FR-AriaCraft</h1>
 ## A. Pres requis
 Toutes les ressources citées ci-dessous nécésitent Spigot 1.8.8 (mis à dispo dans le rep. "Serveur").
 ## B. Skripts 
@@ -40,7 +44,7 @@ Installez le plugin dans le dossier "plugins" de votre serveur minecraft, reload
 <br><br>
 
 
-# EN-AriaCraft
+<h1 id="en">EN-AriaCraft</h1>
 ## A. Prerequisites
 All the resources mentioned below need Spigot 1.8.8 (available in the "Serveur" rep.).
 ## B. Skripts 
