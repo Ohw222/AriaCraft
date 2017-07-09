@@ -1,6 +1,6 @@
 <h1>MENU</h1>
-<a href="#fr"><h4><strong>Français</strong> French</h4></a><br>
-<a href="#en"><h4><strong>English</strong> Anglais</h4></a>
+[<a href="#fr"><h4><strong>Français</strong> French</h4>](#fr-Ariacraft)</a>
+[<h4><strong>English</strong> Anglais</h4>](#en-Ariacraft)<br>
 
 <h1 id="fr">FR-AriaCraft</h1>
 ## A. Pres requis
